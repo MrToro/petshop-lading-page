@@ -1,8 +1,10 @@
+import { Title, Wrapper } from "./App.Styles";
+
 const App: React.FC = () => {
 	return (
-		<>
-			<h1>Hola Mundo</h1>
-		</>
+		<Wrapper>
+			<Title>Hola mundo</Title>
+		</Wrapper>
 	);
 };
 
