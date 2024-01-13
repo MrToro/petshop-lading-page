@@ -1,9 +1,17 @@
-// import logo from "../assets/images/footer-logo.svg";
+import logo from "../assets/images/footer-logo.svg";
+import instagram from "../assets/images/footer-instagram.svg";
+import facebook from "../assets/images/footer-facebook.svg";
+import twitter from "../assets/images/footer-twitter.svg";
+import lines from "../assets/images/footer-lines.svg";
 
-// type ImagesType = Record<string, string>;
+const Images = {
+	logo,
+	lines,
+	socials: {
+		instagram,
+		facebook,
+		twitter,
+	},
+};
 
-// const Images: ImagesType = {
-// 	logo: logo,
-// };
-
-// export default Images;
+export default Images;

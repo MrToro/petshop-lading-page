@@ -1,15 +1,27 @@
-import { Wrapper, Paragraph, Link } from "./Footer.styles";
-// import Images from "./Footer.images";
+import {
+	Wrapper,
+	LeftColumn,
+	RightColumn,
+	Navigation,
+	Lines,
+	Socials,
+	Paragraph,
+	Link,
+} from "./Footer.styles";
+import Images from "./Footer.images";
 
 const Footer = () => {
 	return (
 		<Wrapper>
-			<div>
-				<Link href="#">{/* <img src={Images.logo} alt="logo" /> */}</Link>
-			</div>
+			<LeftColumn>
+				<Link href="#">
+					<img src={Images.logo} alt="logo" />
+				</Link>
+				<Lines src={Images.lines} alt="logo" />
+			</LeftColumn>
 
-			<div>
-				<div>
+			<RightColumn>
+				<Navigation>
 					<Link href="#" white="true">
 						About
 					</Link>
@@ -31,12 +43,22 @@ const Footer = () => {
 					<Link href="#" white="true">
 						Contact
 					</Link>
-				</div>
+				</Navigation>
 
-				<div>
+				<Socials>
 					<Paragraph white="true">Flow</Paragraph>
-				</div>
-			</div>
+
+					<Link href="#">
+						<img src={Images.socials.facebook} alt="logo" />
+					</Link>
+					<Link href="#">
+						<img src={Images.socials.instagram} alt="logo" />
+					</Link>
+					<Link href="#">
+						<img src={Images.socials.twitter} alt="logo" />
+					</Link>
+				</Socials>
+			</RightColumn>
 		</Wrapper>
 	);
 };
