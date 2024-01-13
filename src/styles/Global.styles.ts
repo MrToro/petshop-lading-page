@@ -14,8 +14,8 @@ export const Heading1 = styled.h1`
 	font-size: 9.6rem;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 9.2rem;
 	letter-spacing: -4.8px;
+	line-height: 9.2rem;
 	text-transform: uppercase;
 
 	span {
@@ -24,8 +24,8 @@ export const Heading1 = styled.h1`
 		font-size: 9.6rem;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 9.2rem;
 		letter-spacing: -4.8px;
+		line-height: 9.2rem;
 		text-transform: uppercase;
 	}
 `;
@@ -60,4 +60,36 @@ export const Link = styled.a<{ white?: boolean }>`
 
 export const Section = styled.section`
 	padding: 50px 170px;
+`;
+
+export const Button = styled.button<{ primary?: boolean; tertiary?: boolean }>`
+	align-items: flex-start;
+	gap: 10px;
+	padding: 12px 32px;
+
+	background: ${(props) =>
+		props.primary
+			? Colors.primary
+			: props.tertiary
+			? "transparent"
+			: Colors.dark};
+	border: 2px solid ${(props) => (props.tertiary ? Colors.dark : "transparent")};
+	border-radius: 190px;
+	color: ${(props) => (props.tertiary ? Colors.dark : Colors.light)};
+	display: inline-flex;
+	font-family: Open Sans;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 500;
+	letter-spacing: 1.8px;
+	line-height: 3.8rem;
+
+	transition: all 0.16s ease-in-out;
+
+	&:hover {
+		cursor: pointer;
+		border-color: ${(props) =>
+			props.tertiary ? Colors.primary : Colors.white};
+		color: ${(props) => (props.tertiary ? Colors.primary : Colors.white)};
+	}
 `;
