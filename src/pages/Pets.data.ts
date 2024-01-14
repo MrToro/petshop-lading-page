@@ -12,16 +12,23 @@ import pet11 from "../assets/images/pet-11.jpg";
 import pet12 from "../assets/images/pet-12.jpg";
 import pet13 from "../assets/images/pet-13.jpg";
 
+export type IPet = {
+	id: number;
+	name: string;
+	race: string;
+	image: string;
+};
+
 export default [
-	{ id: 1, name: "Robert", image: pet01 },
-	{ id: 2, name: "Molly", image: pet02 },
-	{ id: 3, name: "Charlie", image: pet03 },
-	{ id: 4, name: "Buddy", image: pet04 },
-	{ id: 5, name: "Oscar", image: pet05 },
-	{ id: 6, name: "Toby", image: pet06 },
-	{ id: 7, name: "Tucker", image: pet07 },
-	{ id: 8, name: "Jack", image: pet08 },
-	{ id: 9, name: "Duke", image: pet09 },
-	{ id: 10, name: "Teddy", image: pet10 },
-	{ id: 11, name: "Winston", image: pet11 },
+	{ id: 1, name: "Robert", race: "Dog", image: pet01 },
+	{ id: 2, name: "Molly", race: "Cat", image: pet02 },
+	{ id: 3, name: "Charlie", race: "Parrot", image: pet03 },
+	{ id: 4, name: "Buddy", race: "Leopard", image: pet04 },
+	{ id: 5, name: "Oscar", race: "Dog", image: pet05 },
+	{ id: 6, name: "Toby", race: "Canary", image: pet06 },
+	{ id: 7, name: "Tucker", race: "Rabit", image: pet07 },
+	{ id: 8, name: "Jack", race: "Cat", image: pet08 },
+	{ id: 9, name: "Duke", race: "Canary", image: pet09 },
+	{ id: 10, name: "Teddy", race: "Parrot", image: pet10 },
+	{ id: 11, name: "Winston", race: "Cat", image: pet11 },
 ];
