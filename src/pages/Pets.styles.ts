@@ -39,22 +39,45 @@ export const RightColumn = styled.article`
 	justify-content: end;
 `;
 
-export const Pet = styled.img<{ active?: boolean }>`
+export const Pet = styled.picture<{ active?: boolean }>`
 	grid-column: ${(props) => (props.active ? "2 / span 2" : "auto")};
 	grid-row: ${(props) => (props.active ? "1 / span 2" : "auto")};
-
 	width: ${(props) => (props.active ? "216px" : "100px")};
 	height: ${(props) => (props.active ? "216px" : "100px")};
-	filter: brightness(${(props) => (props.active ? "1" : "0.6")});
-	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
 
-	border: 3px solid ${(props) => (props.active ? Colors.white : "transparent")};
+	p {
+		display: ${(props) => (props.active ? "block" : "none")};
+		color: ${Colors.white};
+		font-family: Josefin Sans;
+		font-size: 3.3rem;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 3.4rem;
+	}
 
-	transition: all 0.16s ease-in-out;
+	span {
+		font-size: 1.7rem;
+	}
 
-	&:hover {
-		cursor: pointer;
-		filter: brightness(1);
-		border-color: ${Colors.yellow};
+	img {
+		width: ${(props) => (props.active ? "80%" : "100%")};
+		height: ${(props) => (props.active ? "80%" : "100%")};
+		filter: brightness(${(props) => (props.active ? "1" : "0.6")});
+		border-radius: 50%;
+
+		border: 3px solid
+			${(props) => (props.active ? Colors.white : "transparent")};
+
+		transition: all 0.16s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			filter: brightness(1);
+			border-color: ${Colors.yellow};
+		}
 	}
 `;

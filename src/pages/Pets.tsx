@@ -25,12 +25,13 @@ export const Pets = () => {
 				</LeftColumn>
 				<RightColumn>
 					{PetsData.map((pet: IPet, key: number) => (
-						<Pet
-							key={key}
-							src={pet.image}
-							onClick={() => handleActivePetClick(key)}
-							active={activePet === key}
-						/>
+						<Pet key={key} active={activePet === key}>
+							<p>
+								{pet.race} <span>({pet.name})</span>
+							</p>
+
+							<img src={pet.image} onClick={() => handleActivePetClick(key)} />
+						</Pet>
 					))}
 				</RightColumn>
 			</Container>
