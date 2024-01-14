@@ -56,6 +56,11 @@ export const Link = styled.a<{ white?: boolean }>`
 	font-weight: 600;
 	letter-spacing: 0.16px;
 	line-height: 4.2rem;
+	transition: color 0.16s ease-in-out;
+
+	&:hover {
+		color: ${Colors.primary};
+	}
 `;
 
 export const Section = styled.section`

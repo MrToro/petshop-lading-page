@@ -30,6 +30,7 @@ export const LeftColumn = styled.div`
 export const RightColumn = styled.div`
 	display: flex;
 	flex-direction: column;
+	gap: 16px;
 	padding-left: 16px;
 `;
 

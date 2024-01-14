@@ -17,9 +17,9 @@ const Footer: React.FC = () => {
 			<Container>
 				<LeftColumn>
 					<Link href="#">
-						<img src={Images.logo} />
+						<img src={Images.logo} draggable="false" alt="logotype" />
 					</Link>
-					<Lines src={Images.lines} />
+					<Lines src={Images.lines} draggable="false" alt="decoration lines" />
 				</LeftColumn>
 
 				<RightColumn>
