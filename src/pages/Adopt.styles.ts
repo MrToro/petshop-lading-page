@@ -41,7 +41,7 @@ export const Container = styled.div`
 
 export const LeftColumn = styled.div``;
 
-export const RightColumn = styled.div`
+export const RightColumn = styled.article`
 	display: flex;
 	flex-direction: column;
 	gap: 32px;

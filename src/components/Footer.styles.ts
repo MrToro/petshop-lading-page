@@ -8,6 +8,8 @@ import {
 export const Wrapper = styled.footer`
 	padding: 80px 170px;
 	background-color: ${Colors.dark};
+	position: relative;
+	z-index: 1;
 `;
 
 export const Container = styled.div`
@@ -22,11 +24,13 @@ export const LeftColumn = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding-right: 16px;
 `;
 
 export const RightColumn = styled.div`
 	display: flex;
 	flex-direction: column;
+	padding-left: 16px;
 `;
 
 export const Lines = styled.img`
