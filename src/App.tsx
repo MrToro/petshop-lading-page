@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Adopt from "./pages/Adopt";
 import Subscribe from "./pages/Subscribe";
 import { Pets } from "./pages/Pets";
+import Reviews from "./pages/Reviews";
 
 const App: React.FC = () => {
 	return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
 			<GlobalStyle />
 			<Pets />
 			<Adopt />
+			<Reviews />
 			<Subscribe />
 			<Footer />
 		</>
