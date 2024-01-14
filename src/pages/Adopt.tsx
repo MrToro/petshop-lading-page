@@ -3,19 +3,48 @@ import {
 	Container,
 	LeftColumn,
 	RightColumn,
-	AdoptImage,
 	Heading2,
 	Paragraph,
 	List,
 	Button,
 } from "./Adopt.styles";
 
+import Images from "./Adopt.images";
+
 const Adopt: React.FC = () => {
 	return (
 		<Wrapper>
 			<Container>
 				<LeftColumn>
-					<AdoptImage />
+					<picture>
+						<source
+							sizes="1920w, 1280w, 640w"
+							srcSet={`${Images.dog.avif.desktop} 1920w, 
+							${Images.dog.avif.tablet} 1280w, 
+							${Images.dog.avif.mobile} 640w`}
+							type="image/avif"
+						/>
+						<source
+							sizes="1920w, 1280w, 640w"
+							srcSet={`${Images.dog.webp.desktop} 1920w, 
+							${Images.dog.webp.tablet} 1280w, 
+							${Images.dog.webp.mobile} 640w`}
+							type="image/webp"
+						/>
+						<source
+							sizes="1920w, 1280w, 640w"
+							srcSet={`${Images.dog.jpg.desktop} 1920w, 
+							${Images.dog.jpg.tablet} 1280w, 
+							${Images.dog.jpg.mobile} 640w`}
+							type="image/jpeg"
+						/>
+						<img
+							loading="lazy"
+							decoding="async"
+							src={Images.dog.jpg.desktop}
+							alt="A woman with a dog"
+						/>
+					</picture>
 				</LeftColumn>
 
 				<RightColumn>

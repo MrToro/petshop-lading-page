@@ -25,8 +25,8 @@ export const Wrapper = styled(GlobalSection)`
 	&::after {
 		content: url(${Images.scratch});
 		position: absolute;
-		bottom: 25px;
 		right: -106px;
+		bottom: 25px;
 		width: 212px;
 		height: 229px;
 	}
@@ -39,24 +39,23 @@ export const Container = styled.div`
 	margin: 0 auto;
 `;
 
-export const LeftColumn = styled.div``;
+export const LeftColumn = styled.div`
+	padding-right: 32px;
+
+	img {
+		width: 100%;
+		height: 100%;
+		mask-image: url(${Images.dog.mask});
+		mask-repeat: no-repeat;
+		mask-size: contain;
+	}
+`;
 
 export const RightColumn = styled.article`
 	display: flex;
 	flex-direction: column;
 	gap: 32px;
-`;
-
-export const AdoptImage = styled.div`
-	background-image: url(${Images.adopt.desktop});
-	background-position: 70%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 100%;
-	height: 100%;
-	mask-image: url(${Images.adopt.mask});
-	mask-repeat: no-repeat;
-	mask-size: contain;
+	padding-left: 32px;
 `;
 
 export const Heading2 = styled(GlobalHeading2)``;

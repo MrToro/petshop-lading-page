@@ -1,20 +1,38 @@
 import listStyle from "../assets/images/adopt-list-style.svg";
-import adoptMask from "../assets/images/adopt-mask.svg";
-import adoptDesktop from "../assets/images/adopt_desktop.jpg";
-import adoptTablet from "../assets/images/adopt_tablet.jpg";
-import adoptMobile from "../assets/images/adopt_mobile.jpg";
 import lines from "../assets/images/adopt-lines.svg";
 import scratch from "../assets/images/adopt-scratch.svg";
+import mask from "../assets/images/adopt-mask.svg";
+import dogAvifDesktop from "../assets/images/adopt_desktop.avif";
+import dogAvifTablet from "../assets/images/adopt_tablet.avif";
+import dogAvifMobile from "../assets/images/adopt_mobile.avif";
+import dogWebpDesktop from "../assets/images/adopt_desktop.webp";
+import dogWebpTablet from "../assets/images/adopt_tablet.webp";
+import dogWebpMobile from "../assets/images/adopt_mobile.webp";
+import dogJpgDesktop from "../assets/images/adopt_desktop.jpg";
+import dogJpgTablet from "../assets/images/adopt_tablet.jpg";
+import dogJpgMobile from "../assets/images/adopt_mobile.jpg";
 
 const Images = {
 	listStyle,
 	lines,
 	scratch,
-	adopt: {
-		mask: adoptMask,
-		desktop: adoptDesktop,
-		tablet: adoptTablet,
-		mobile: adoptMobile,
+	dog: {
+		mask,
+		avif: {
+			desktop: dogAvifDesktop,
+			tablet: dogAvifTablet,
+			mobile: dogAvifMobile,
+		},
+		webp: {
+			desktop: dogWebpDesktop,
+			tablet: dogWebpTablet,
+			mobile: dogWebpMobile,
+		},
+		jpg: {
+			desktop: dogJpgDesktop,
+			tablet: dogJpgTablet,
+			mobile: dogJpgMobile,
+		},
 	},
 };
 
