@@ -8,6 +8,7 @@ import {
 import Images from "./Subscribe.images";
 
 export const Wrapper = styled(GlobalSection)`
+	padding: 50px 170px;
 	position: relative;
 
 	&::before {
@@ -40,15 +41,6 @@ export const Container = styled.div`
 	margin: 0 auto;
 
 	&::before {
-		content: url(${Images.arc});
-		position: absolute;
-		top: 25%;
-		left: 12%;
-		width: 550.443px;
-		height: 163.675px;
-	}
-
-	&::after {
 		content: url(${Images.lines});
 		position: absolute;
 		top: 57px;
@@ -59,30 +51,38 @@ export const Container = styled.div`
 `;
 
 export const LeftColumn = styled.div`
-	padding-right: 50px;
+	padding-right: 64px;
 	position: relative;
 
-	&::after {
-		content: "";
+	picture {
+		&::before {
+			content: url(${Images.arc});
+			position: absolute;
+			width: 550.443px;
+			height: 163.675px;
+			transform-origin: 50% 50%;
+			transform: translate(-10%, 25%);
+		}
+	}
+
+	img {
 		position: absolute;
-		top: -150px;
-		left: 0;
+		overflow: visible;
 		width: 400px;
-		height: 600px;
-		background-image: url(${Images.desktop.png});
-		background-size: cover;
+		transform-origin: 50% 50%;
+		transform: translate(20%, -20%);
 	}
 `;
 
 export const RightColumn = styled.article`
-	padding-left: 50px;
+	padding-left: 64px;
 `;
 
 export const Heading2 = styled(GlobalHeading2)``;
 
 export const Form = styled.form`
 	display: grid;
-	grid-template-columns: 1fr 50px;
+	grid-template-columns: 1fr 40px;
 	padding-top: 50px;
 	padding-bottom: 16px;
 	width: 100%;
