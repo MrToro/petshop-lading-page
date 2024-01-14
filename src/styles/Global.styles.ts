@@ -59,7 +59,7 @@ export const Link = styled.a<{ white?: boolean }>`
 `;
 
 export const Section = styled.section`
-	padding: 50px 170px;
+	padding: 80px 170px;
 `;
 
 export const Button = styled.button<{ primary?: boolean; tertiary?: boolean }>`

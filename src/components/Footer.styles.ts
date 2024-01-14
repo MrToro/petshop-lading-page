@@ -6,10 +6,15 @@ import {
 } from "../styles/Global.styles";
 
 export const Wrapper = styled.footer`
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 	padding: 80px 170px;
 	background-color: ${Colors.dark};
+`;
+
+export const Container = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-width: 1200px;
+	margin: 0 auto;
 `;
 
 export const LeftColumn = styled.div`
