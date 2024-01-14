@@ -22,10 +22,11 @@ export const Wrapper = styled(GlobalSection)`
 
 export const Container = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 230px 2fr;
 	max-width: 1200px;
 	margin: 0 auto;
 	align-items: center;
+	justify-content: space-evenly;
 `;
 
 export const LeftColumn = styled.div``;
@@ -34,15 +35,16 @@ export const RightColumn = styled.article`
 	display: grid;
 	grid-template-columns: repeat(7, 100px);
 	grid-template-rows: repeat(2, 100px);
-	gap: 32px;
+	gap: 16px;
+	justify-content: end;
 `;
 
 export const Pet = styled.img<{ active?: boolean }>`
 	grid-column: ${(props) => (props.active ? "2 / span 2" : "auto")};
 	grid-row: ${(props) => (props.active ? "1 / span 2" : "auto")};
 
-	width: ${(props) => (props.active ? "232px" : "100px")};
-	height: ${(props) => (props.active ? "232px" : "100px")};
+	width: ${(props) => (props.active ? "216px" : "100px")};
+	height: ${(props) => (props.active ? "216px" : "100px")};
 	filter: brightness(${(props) => (props.active ? "1" : "0.6")});
 	border-radius: 50%;
 
