@@ -37,6 +37,9 @@ export const LeftColumn = styled.div`
 	position: relative;
 
 	img {
+		margin: 0 auto;
+		width: 600px;
+		height: 600px;
 		border-radius: 36px;
 		border: 2px solid ${Colors.black};
 	}
