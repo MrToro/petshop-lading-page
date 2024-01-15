@@ -68,7 +68,7 @@ export const LeftColumn = styled.div`
 `;
 
 export const RightColumn = styled.div`
-	img {
+	& > img {
 		height: 700px;
 		transform: translateY(-5%);
 		overflow: visible;
@@ -84,4 +84,19 @@ export const SingIn = styled(Button)`
 
 export const CTA = styled(Button)`
 	width: max-content;
+`;
+
+export const Slider = styled.div`
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	background-color: ${Colors.blue};
+	border-radius: 200px;
+	position: absolute;
+	transform: translateY(-75px);
+
+	button {
+		margin: 0;
+	}
 `;

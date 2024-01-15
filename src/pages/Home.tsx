@@ -9,9 +9,30 @@ import {
 	RightColumn,
 	Heading,
 	CTA,
+	Slider,
 } from "./Home.styles";
 
 import dog from "../assets/images/header-hero_desktop.png";
+import SliderButton from "../components/Slider/SliderButton";
+import SliderPagination from "../components/Slider/SliderPagination";
+
+const data = [
+	{
+		id: 0,
+	},
+	{
+		id: 1,
+	},
+	{
+		id: 2,
+	},
+	{
+		id: 3,
+	},
+	{
+		id: 4,
+	},
+];
 
 const Home = () => {
 	return (
@@ -35,6 +56,19 @@ const Home = () => {
 				</LeftColumn>
 				<RightColumn>
 					<img src={dog} alt=" a little dog" />
+					<Slider>
+						<SliderButton
+							direction="left"
+							isDiagonal={true}
+							onClick={() => {}}
+						/>
+						<SliderPagination currentPage={2} data={data} />
+						<SliderButton
+							direction="right"
+							isDiagonal={true}
+							onClick={() => {}}
+						/>
+					</Slider>
 				</RightColumn>
 			</Container>
 		</Wrapper>
