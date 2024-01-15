@@ -4,6 +4,7 @@ import {
 	Heading2,
 	Container,
 	ServicesContainer,
+	SliderButtons,
 } from "./Services.styles";
 
 import Data from "./Services.data";
@@ -34,11 +35,10 @@ const Services = () => {
 						<Card key={item.id} data={item} isActive={cardActive === item.id} />
 					))}
 				</ServicesContainer>
-
-				<div>
+				<SliderButtons>
 					<SliderButton onClick={handlePrevious} direction="left" />
 					<SliderButton onClick={handleNext} direction="right" border={true} />
-				</div>
+				</SliderButtons>
 			</Container>
 		</Wrapper>
 	);

@@ -56,3 +56,8 @@ export const ServicesContainer = styled.div<{
 	translate: calc((-540px - 32px) * ${(props) => props.currentCard}) 0px;
 	transition: translate 0.5s ease-in-out;
 `;
+
+export const SliderButtons = styled.div`
+	display: flex;
+	justify-content: flex-end;
+`;
