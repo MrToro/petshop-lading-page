@@ -9,6 +9,7 @@ import {
 	Paragraph,
 	Link,
 } from "./Footer.styles";
+
 import Images from "./Footer.images";
 
 const Footer: React.FC = () => {

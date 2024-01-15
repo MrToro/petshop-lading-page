@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
 	Wrapper,
 	Container,
@@ -8,12 +10,11 @@ import {
 
 import PetsData, { IPet } from "./Pets.data";
 import Images from "./Pets.images";
-import { useState } from "react";
 
-export const Pets = () => {
-	const [activePet, setActivePet] = useState<number>(0);
+export const Pets: React.FC = () => {
+	const [activePet, setActivePet] = useState<Number>(0);
 
-	const handleActivePetClick = (index: number) => {
+	const handleActivePetClick = (index: Number) => {
 		setActivePet(index);
 	};
 

@@ -12,7 +12,27 @@ import dogJpgDesktop from "../assets/images/adopt_desktop.jpg";
 import dogJpgTablet from "../assets/images/adopt_tablet.jpg";
 import dogJpgMobile from "../assets/images/adopt_mobile.jpg";
 
-const Images = {
+interface IDevices {
+	desktop: string;
+	tablet: string;
+	mobile: string;
+}
+
+interface IDog {
+	mask: string;
+	avif: IDevices;
+	webp: IDevices;
+	jpg: IDevices;
+}
+
+interface IImages {
+	listStyle: string;
+	lines: string;
+	scratch: string;
+	dog: IDog;
+}
+
+const Images: IImages = {
 	listStyle,
 	lines,
 	scratch,

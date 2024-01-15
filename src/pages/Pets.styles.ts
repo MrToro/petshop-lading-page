@@ -39,7 +39,7 @@ export const RightColumn = styled.article`
 	justify-content: end;
 `;
 
-export const Pet = styled.picture<{ active?: boolean }>`
+export const Pet = styled.picture<{ active?: Boolean }>`
 	grid-column: ${(props) => (props.active ? "2 / span 2" : "auto")};
 	grid-row: ${(props) => (props.active ? "1 / span 2" : "auto")};
 	width: ${(props) => (props.active ? "216px" : "100px")};

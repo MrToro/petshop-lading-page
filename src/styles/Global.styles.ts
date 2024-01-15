@@ -30,7 +30,7 @@ export const Heading1 = styled.h1`
 	}
 `;
 
-export const Heading2 = styled.h2<{ light?: boolean; openSans?: boolean }>`
+export const Heading2 = styled.h2<{ light?: Boolean; openSans?: Boolean }>`
 	color: ${(props) => (props.light ? Colors.light : Colors.dark)};
 	font-family: ${(props) => (props.openSans ? "Open Sans" : "Josefin Sans")};
 	font-size: 4.6rem;
@@ -39,7 +39,7 @@ export const Heading2 = styled.h2<{ light?: boolean; openSans?: boolean }>`
 	line-height: 6rem;
 `;
 
-export const Paragraph = styled.p<{ light?: boolean }>`
+export const Paragraph = styled.p<{ light?: Boolean }>`
 	color: ${(props) => (props.light ? Colors.light : Colors.dark)};
 	font-family: Josefin Sans;
 	font-size: 2.2rem;
@@ -48,7 +48,7 @@ export const Paragraph = styled.p<{ light?: boolean }>`
 	line-height: 3.4rem;
 `;
 
-export const Link = styled.a<{ white?: boolean }>`
+export const Link = styled.a<{ white?: Boolean }>`
 	color: ${(props) => (props.white ? Colors.white : Colors.dark)};
 	font-family: Josefin Sans;
 	font-size: 1.6rem;
@@ -67,7 +67,7 @@ export const Section = styled.section`
 	padding: 80px 170px;
 `;
 
-export const Button = styled.button<{ primary?: boolean; tertiary?: boolean }>`
+export const Button = styled.button<{ primary?: Boolean; tertiary?: Boolean }>`
 	align-items: flex-start;
 	gap: 10px;
 	padding: 12px 32px;

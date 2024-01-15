@@ -9,7 +9,7 @@ import {
 
 import Images from "./Subscribe.images";
 
-const Subscribe = () => {
+const Subscribe: React.FC = () => {
 	return (
 		<Wrapper>
 			<Container>

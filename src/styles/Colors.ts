@@ -1,6 +1,15 @@
-type ColorsType = Record<string, string>;
+interface IColors {
+	primary: string;
+	blue: string;
+	yellow: string;
+	bright: string;
+	light: string;
+	dark: string;
+	white: string;
+	black: string;
+}
 
-const Colors: ColorsType = {
+const Colors: IColors = {
 	primary: "#ED5C01",
 	blue: "#189CAB",
 	yellow: "#FBBD08",

@@ -35,6 +35,7 @@ export const Container = styled.div`
 
 export const LeftColumn = styled.div`
 	position: relative;
+
 	img {
 		border-radius: 36px;
 		border: 2px solid ${Colors.black};
@@ -49,6 +50,17 @@ export const LeftColumn = styled.div`
 		height: 136px;
 		z-index: 1;
 	}
+`;
+
+export const Slider = styled.div`
+	position: absolute;
+	left: calc(50% - 120px);
+	bottom: -68px;
+	padding: 64px;
+	background-image: url(${Images.sliderMask});
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 `;
 
 export const RightColumn = styled.article`

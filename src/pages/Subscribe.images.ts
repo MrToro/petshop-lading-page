@@ -11,7 +11,22 @@ import arc from "../assets/images/subscribe-arc.svg";
 import lines from "../assets/images/subscribe-lines.svg";
 import arrow from "../assets/images/subscribe-arrow.svg";
 
-const Images = {
+interface IFormat {
+	avif: string;
+	webp: string;
+	png: string;
+}
+
+interface IImages {
+	arc: string;
+	lines: string;
+	arrow: string;
+	desktop: IFormat;
+	tablet: IFormat;
+	mobile: IFormat;
+}
+
+const Images: IImages = {
 	arc,
 	lines,
 	arrow,
