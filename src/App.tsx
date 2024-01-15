@@ -5,12 +5,14 @@ import Adopt from "./pages/Adopt";
 import Subscribe from "./pages/Subscribe";
 import { Pets } from "./pages/Pets";
 import Reviews from "./pages/Reviews";
+import Services from "./pages/Services";
 
 const App: React.FC = () => {
 	return (
 		<>
 			<GlobalStyle />
 			<Pets />
+			<Services />
 			<Adopt />
 			<Reviews />
 			<Subscribe />
