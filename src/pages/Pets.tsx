@@ -11,7 +11,7 @@ import {
 import PetsData, { IPet } from "./Pets.data";
 import Images from "./Pets.images";
 
-export const Pets: React.FC = () => {
+const Pets: React.FC = () => {
 	const [activePet, setActivePet] = useState<Number>(0);
 
 	const handleActivePetClick = (index: Number) => {
@@ -39,3 +39,5 @@ export const Pets: React.FC = () => {
 		</Wrapper>
 	);
 };
+
+export default Pets;
