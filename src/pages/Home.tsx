@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
 	Wrapper,
 	Navigation,
@@ -12,29 +14,29 @@ import {
 	Slider,
 } from "./Home.styles";
 
-import dog from "../assets/images/header-hero_desktop.png";
+import data from "../pages/Home.data";
 import SliderButton from "../components/Slider/SliderButton";
 import SliderPagination from "../components/Slider/SliderPagination";
 
-const data = [
-	{
-		id: 0,
-	},
-	{
-		id: 1,
-	},
-	{
-		id: 2,
-	},
-	{
-		id: 3,
-	},
-	{
-		id: 4,
-	},
-];
-
 const Home = () => {
+	const [current, setCurrent] = useState(0);
+
+	const handleNext = () => {
+		if (current === data.length - 1) {
+			setCurrent(0);
+		} else {
+			setCurrent(current + 1);
+		}
+	};
+
+	const handlePrev = () => {
+		if (current === 0) {
+			setCurrent(data.length - 1);
+		} else {
+			setCurrent(current - 1);
+		}
+	};
+
 	return (
 		<Wrapper>
 			<Navigation>
@@ -55,18 +57,21 @@ const Home = () => {
 					<CTA primary={true}>Learn More</CTA>
 				</LeftColumn>
 				<RightColumn>
-					<img src={dog} alt=" a little dog" />
+					<img
+						src={data.find((item) => item.id === current)?.image}
+						alt=" a little pet"
+					/>
 					<Slider>
 						<SliderButton
 							direction="left"
 							isDiagonal={true}
-							onClick={() => {}}
+							onClick={handlePrev}
 						/>
-						<SliderPagination currentPage={2} data={data} />
+						<SliderPagination currentPage={current} data={data} />
 						<SliderButton
 							direction="right"
 							isDiagonal={true}
-							onClick={() => {}}
+							onClick={handleNext}
 						/>
 					</Slider>
 				</RightColumn>
