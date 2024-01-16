@@ -10,6 +10,7 @@ import {
 	LeftColumn,
 	RightColumn,
 	Heading,
+	SubHeading,
 	CTA,
 	Slider,
 } from "./Home.styles";
@@ -52,7 +53,8 @@ const Home = () => {
 			<Container>
 				<LeftColumn>
 					<Heading>
-						A pet-first <span>approach to</span> wellness
+						<SubHeading>Available in select states</SubHeading>A pet-first{" "}
+						<span>approach to</span> wellness
 					</Heading>
 					<CTA primary={true}>Learn More</CTA>
 				</LeftColumn>

@@ -3,6 +3,10 @@ import styled from "styled-components";
 import { Heading1, Button, Link as GlobalLink } from "../styles/Global.styles";
 import Colors from "../styles/Colors";
 
+import design from "../assets/images/home-design1.svg";
+import titleDesign from "../assets/images/home-design2.svg";
+import subTitleDesign from "../assets/images/home-design3.svg";
+import linkBG from "../assets/images/home-design4.svg";
 import BG from "../assets/images/hero-background.svg";
 
 export const Wrapper = styled.header`
@@ -50,6 +54,18 @@ export const Link = styled(GlobalLink)`
 export const Menu = styled.div`
 	display: flex;
 	gap: 50px;
+
+	& > a:first-child {
+		position: relative;
+		color: ${Colors.white};
+	}
+
+	& > a:first-child::before {
+		content: url(${linkBG});
+		position: absolute;
+		transform: translate(-30%, 20%);
+		z-index: -1;
+	}
 `;
 
 export const Container = styled.div`
@@ -65,6 +81,15 @@ export const LeftColumn = styled.div`
 	flex-direction: column;
 	gap: 40px;
 	justify-content: center;
+	position: relative;
+
+	&::before {
+		content: url(${titleDesign});
+		position: absolute;
+		transform: translate(0%, 75%);
+		top: 0;
+		right: 0;
+	}
 `;
 
 export const RightColumn = styled.div`
@@ -73,9 +98,39 @@ export const RightColumn = styled.div`
 		transform: translateY(-5%);
 		overflow: visible;
 	}
+
+	&::before {
+		content: url(${design});
+		position: absolute;
+		top: 30%;
+		right: -100px;
+	}
 `;
 
-export const Heading = styled(Heading1)``;
+export const Heading = styled(Heading1)`
+	position: relative;
+
+	&::before {
+		content: url(${subTitleDesign});
+		position: absolute;
+		top: -100px;
+		left: 30px;
+	}
+`;
+
+export const SubHeading = styled.p`
+	position: absolute;
+	top: -100px;
+	left: 100px;
+	color: ${Colors.blue};
+	font-family: "Open Sans";
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 3.8rem;
+	letter-spacing: 0.24px;
+	text-transform: none;
+`;
 
 export const SingIn = styled(Button)`
 	color: ${Colors.white};
