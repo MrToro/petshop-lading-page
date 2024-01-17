@@ -1,4 +1,3 @@
-import Breackpoints from "./Breakpoints";
 import Colors from "./Colors";
 import styled, { createGlobalStyle } from "styled-components";
 
@@ -20,13 +19,7 @@ export const Heading1 = styled.h1`
 
 	span {
 		color: ${Colors.primary};
-		font-family: Josefin Sans;
-		font-size: 9.6rem;
-		font-style: normal;
 		font-weight: 400;
-		letter-spacing: -4.8px;
-		line-height: 9.2rem;
-		text-transform: uppercase;
 	}
 `;
 

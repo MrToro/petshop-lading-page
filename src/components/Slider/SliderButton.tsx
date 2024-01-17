@@ -6,11 +6,11 @@ import previous from "../../assets/images/arrow-left.svg";
 import diagonalNext from "../../assets/images/arrow-lower-right.svg";
 import diagonalPrevious from "../../assets/images/arrrow-upper-left.svg";
 
-export const Button = styled.button<{ border?: Boolean }>`
+export const Button = styled.button<{ border?: Boolean; isDiagonal?: Boolean }>`
 	padding-inline: 50px;
 	padding-block: 16px;
 	border-radius: 50%;
-	margin-right: -32px;
+	margin-right: ${(props) => (props.isDiagonal ? "0" : "-32px")};
 	background: ${Colors.dark};
 	border: 2px solid ${(props) => (props.border ? Colors.white : "transparent")};
 
@@ -36,7 +36,7 @@ const SliderButton: React.FC<ISliderButtonProps> = ({
 	border = false,
 }) => {
 	return (
-		<Button border={border} onClick={onClick}>
+		<Button isDiagonal={isDiagonal} border={border} onClick={onClick}>
 			{isDiagonal ? (
 				<img
 					src={direction === "right" ? diagonalNext : diagonalPrevious}

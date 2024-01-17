@@ -18,7 +18,7 @@ export const Wrapper = styled.header`
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 30%;
+		width: 35%;
 		height: 100%;
 		background-color: ${Colors.dark};
 		z-index: -1;
@@ -28,7 +28,7 @@ export const Wrapper = styled.header`
 		content: "";
 		position: absolute;
 		top: 0;
-		left: 60%;
+		left: 50%;
 		width: 20%;
 		height: 100%;
 		background-image: url(${BG});
@@ -43,6 +43,7 @@ export const Navigation = styled.nav`
 	grid-template-columns: 270px 1fr 150px;
 	max-width: 1200px;
 	margin: 0 auto;
+	align-items: center;
 `;
 
 export const Link = styled(GlobalLink)`
@@ -70,7 +71,7 @@ export const Menu = styled.div`
 
 export const Container = styled.div`
 	margin: 0 auto;
-	margin-top: 90px;
+	margin-top: 200px;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	max-width: 1200px;
@@ -142,16 +143,13 @@ export const CTA = styled(Button)`
 `;
 
 export const Slider = styled.div`
+	transform: translate(0, -75px);
+	width: max-content;
 	padding: 5px;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
-	gap: 32px;
-	background-color: ${Colors.blue};
+	gap: 16px;
 	border-radius: 200px;
-	position: absolute;
-	transform: translateY(-75px);
-
-	button {
-		margin: 0;
-	}
+	background-color: ${Colors.blue};
 `;
